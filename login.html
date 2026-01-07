@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StratiQ Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .dark ::-webkit-scrollbar-thumb { background: #475569; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4 lg:p-0">
+<div class="w-full max-w-[1920px] bg-white dark:bg-background-dark min-h-screen flex flex-col lg:flex-row overflow-hidden shadow-2xl relative">
+<!-- Left Panel: Illustration (Desktop) / Top (Mobile) -->
+<div class="lg:w-1/2 w-full relative bg-primary/5 dark:bg-[#1A1F2E] flex flex-col justify-between p-8 lg:p-16 order-first">
+<!-- Branding in illustration panel (Visible on Desktop) -->
+<div class="hidden lg:flex items-center gap-3 text-primary">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">equalizer</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight text-[#111318] dark:text-white">StratiQ</h2>
+</div>
+<div class="flex-1 flex flex-col justify-center items-center py-10 lg:py-0 relative z-10">
+<div class="w-full max-w-md aspect-square bg-contain bg-center bg-no-repeat relative" data-alt="Illustration of a person analyzing business growth charts with abstract AI nodes and floating data elements in soft blue and purple colors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGZfSRADAno-HgWHrBRPR2aY_LBz14_RyW17BqVDs9tvSGZAXyeR7jxzrbo4QCOrheOk8y2XhGu01dq562HLKGGxITL5JZWaGSiwWfObsImyxyutsv-qX9gjOjPIlKh4AUIFBM4Nnwr2EMJfSMPtJQ8N8tfqikekFh7MlMwfrAZhFRTXAJMmRwvPUUzpQwq_HOy3sLtFIXCo5LLlXycSK-4AsLl6k-MQodGAiFDkKotuWARV7BHP27NCHbHXIiaBswy50dOuzzZA');">
+<!-- Gradient overlay for better text contrast if needed, or to blend image -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent mix-blend-overlay rounded-2xl"></div>
+</div>
+<div class="mt-8 text-center max-w-md">
+<h3 class="text-2xl lg:text-3xl font-bold text-[#111318] dark:text-white mb-4">Accelerate Your Growth</h3>
+<p class="text-[#636f88] dark:text-gray-400 text-lg leading-relaxed">
+                        Join thousands of small businesses using GrowMate AI to make data-driven decisions.
+                    </p>
+</div>
+</div>
+<!-- Abstract Background Shapes -->
+<div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+<div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-3xl"></div>
+</div>
+</div>
+<!-- Right Panel: Login Form -->
+<div class="lg:w-1/2 w-full bg-white dark:bg-background-dark flex flex-col justify-center items-center p-6 sm:p-12 lg:p-24 relative">
+<!-- Mobile Branding (Top of form) -->
+<div class="lg:hidden absolute top-6 left-6 flex items-center gap-2 text-primary mb-8">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[16px]">equalizer</span>
+</div>
+<h2 class="text-lg font-bold tracking-tight text-[#111318] dark:text-white">StratiQ</h2>
+</div>
+<div class="w-full max-w-[440px] flex flex-col gap-8">
+<!-- Header -->
+<div class="flex flex-col gap-2">
+<h1 class="text-[#111318] dark:text-white text-3xl lg:text-4xl font-black leading-tight tracking-[-0.02em]">Welcome Back to StratiQ</h1>
+<p class="text-[#636f88] dark:text-gray-400 text-base font-normal leading-normal">Login to continue your business growth journey</p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-5" onsubmit="event.preventDefault();">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-[#111318] dark:text-white text-sm font-semibold leading-normal" for="email">Email Address</label>
+<div class="relative flex items-center">
+<input class="form-input flex w-full rounded-xl border border-[#dcdfe5] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111318] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 focus:border-primary h-14 pl-12 pr-4 text-base placeholder:text-[#636f88] dark:placeholder:text-gray-500 transition-all duration-200" id="email" placeholder="name@company.com" type="email"/>
+<div class="absolute left-4 text-[#636f88] dark:text-gray-500 pointer-events-none flex items-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+</div>
+<!-- Error Message Example (Hidden by default) -->
+<p class="hidden text-red-600 text-xs flex items-center gap-1 mt-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                            Please enter a valid email address
+                        </p>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-[#111318] dark:text-white text-sm font-semibold leading-normal" for="password">Password</label>
+<a class="text-primary text-sm font-medium hover:underline" href="#">Forgot password?</a>
+</div>
+<div class="relative flex items-center group">
+<input class="form-input flex w-full rounded-xl border border-[#dcdfe5] dark:border-gray-700 bg-white dark:bg-gray-800 text-[#111318] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 focus:border-primary h-14 pl-12 pr-12 text-base placeholder:text-[#636f88] dark:placeholder:text-gray-500 transition-all duration-200" id="password" placeholder="Enter your password" type="password"/>
+<div class="absolute left-4 text-[#636f88] dark:text-gray-500 pointer-events-none flex items-center">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<button class="absolute right-4 text-[#636f88] dark:text-gray-500 hover:text-[#111318] dark:hover:text-white transition-colors cursor-pointer flex items-center" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+<!-- Error Message Example (Hidden by default) -->
+<p class="hidden text-red-600 text-xs flex items-center gap-1 mt-1 font-medium">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                            Incorrect password
+                        </p>
+</div>
+<!-- Login Button -->
+<button class="mt-2 w-full bg-primary hover:bg-blue-700 active:bg-blue-800 text-white font-bold h-14 rounded-xl transition-all duration-200 shadow-lg shadow-primary/30 flex items-center justify-center gap-2 group" onclick="window.location.href='dashboard.html'">
+<span>Login</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<!-- Footer -->
+<div class="text-center">
+<p class="text-[#636f88] dark:text-gray-400 text-base">
+                        Don't have an account? 
+                        <a class="text-primary font-bold hover:underline ml-1" href="register.html">Register</a>
+</p>
+</div>
+<!-- Success Message Toast Simulation (Hidden) -->
+<div class="hidden fixed bottom-5 right-5 bg-green-500 text-white px-6 py-4 rounded-lg shadow-xl flex items-center gap-3 animate-bounce">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="font-medium">Login successful. Redirecting…</span>
+</div>
+</div>
+</div>
+</div>
+<script type="module" src="./firebase.js"></script>
+<script type="module" src="./login.js"></script>
+
+</body></html>
