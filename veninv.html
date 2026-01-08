@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registration Type Selection - StratiQ</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200">
+<div class="min-h-screen flex flex-col">
+<!-- Header -->
+<header class="w-full border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 backdrop-blur-sm sticky top-0 z-50">
+<div class="max-w-[1280px] mx-auto px-4 sm:px-10 h-16 flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center gap-3 text-slate-900 dark:text-white cursor-pointer select-none">
+<div class="size-8 flex items-center justify-center text-primary">
+<svg class="w-full h-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">StratiQ</h2>
+</div>
+<!-- Login Action -->
+<button class="flex items-center justify-center h-10 px-6 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                    Log in
+                </button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
+<div class="w-full max-w-5xl space-y-12">
+<!-- Page Heading -->
+<div class="text-center space-y-4 max-w-2xl mx-auto">
+<h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+                        Select Account Type
+                    </h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg font-medium leading-relaxed">
+                        Choose the role that best describes your goals with StratiQ to get started.
+                    </p>
+</div>
+<!-- Selection Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+<!-- Vendor Card -->
+<div class="group relative flex flex-col bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 cursor-pointer overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-transparent to-slate-50 dark:to-slate-700/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="size-14 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">storefront</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Vendor</h3>
+<p class="text-slate-500 dark:text-slate-400 mb-8 flex-grow leading-relaxed">
+                                Showcase your business, list your services, and access a vast network of potential investors ready to connect.
+                            </p>
+<div class="space-y-4">
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span>Direct connection with decision makers</span>
+</li>
+<li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span>Showcase business portfolio</span>
+</li>
+</ul>
+<a href="loginr.html">
+<button  class="w-full py-3 px-6 rounded-lg bg-primary hover:bg-blue-700 text-white font-bold text-base shadow-md shadow-blue-500/20 transition-all duration-200 flex items-center justify-center gap-2">
+<span>Join as Vendor</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+
+</button>
+</a>
+</div>
+</div>
+</div>
+<!-- Investor Card -->
+<div class="group relative flex flex-col bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-8 shadow-sm hover:shadow-xl hover:border-primary/50 transition-all duration-300 cursor-pointer overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-transparent to-slate-50 dark:to-slate-700/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="size-14 rounded-full bg-blue-50 dark:bg-blue-900/20 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">trending_up</span>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-3">Investor</h3>
+<p class="text-slate-500 dark:text-slate-400 mb-8 flex-grow leading-relaxed">
+                                Discover vetted opportunities, manage your portfolio, and track your investment performance in real-time.
+                            </p>
+<div class="space-y-4">
+<ul class="space-y-3 mb-8">
+<li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span>Access exclusive vetted deals</span>
+</li>
+<li class="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span>Advanced portfolio analytics</span>
+</li>
+</ul>
+<a href="investorlogin.html">
+<button class="w-full py-3 px-6 rounded-lg bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white font-bold text-base hover:border-primary hover:text-primary dark:hover:border-primary dark:hover:text-primary transition-all duration-200 flex items-center justify-center gap-2">
+<span>Join as Investor</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+
+</button>
+</a>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Meta/Login Link -->
+<div class="text-center pt-4 pb-8">
+<p class="text-slate-500 dark:text-slate-400 text-sm">
+                        Already have an account? 
+                        <a class="text-primary font-bold hover:underline decoration-2 underline-offset-4" href="loginr.html">Log in here</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="py-6 text-center text-xs text-slate-400 dark:text-slate-600">
+<p>© 2024 StratiQ Inc. All rights reserved.</p>
+</footer>
+</div>
+</body></html>

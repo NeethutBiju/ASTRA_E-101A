@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vendor Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+
+<h2 claas="head">Vendor Dashboard</h2>
+
+<div class="card">
+  <h3>Pitch Your Idea</h3>
+
+  <form onsubmit="submitPitch(event)">
+    <input id="idea" placeholder="Business Idea" required>
+    <input id="investment" type="number" placeholder="Expected Investment (₹)" required>
+    <input id="profit" placeholder="Expected Profit %" required>
+    <textarea id="description" placeholder="Describe your idea" required></textarea>
+    <button type="submit">Submit Pitch</button>
+  </form>
+</div>
+
+<h3>Your Submitted Ideas</h3>
+<div id="vendorPitches"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
